@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="refresh" content="60">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>SS-Hotspot - Status</title>
+    <link rel="stylesheet" href="../2style.css">
+
+
+</head>
+
+<body>
+    <div class="ie-fixMinHeight">
+        <div class="main">
+            <div class="wrap">
+
+                <h1>Hi, <%= UserData.username %></h1>
+
+
+                <form action="/users/logout" method="post">
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>IP address</td>
+                                <td>10.0.165.93</td>
+                            </tr>
+                            <tr>
+                                <td>Bytes up / down</td>
+                                <td>2.0 MiB / 42.4 MiB</td>
+                            </tr>
+
+                            <tr>
+                                <td>Connected / left</td>
+                                <td>5m29s / 1h24m31s</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Status refresh</td>
+                                <td>1m</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                 
+                    <input type="submit" value="Log out">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+const User = require('../models/User')
+
+module.exports = (req, res) => {
+    User.create(req.body).then(() => {
+        console.log("User register successfully!")
+        res.redirect('/wifi.ss/login')
+    }).catch((error) => {
+        //console.log(error.errors)
+        if (error) {
+            const validationErrors = Object.keys(error.errors).map(key => error.errors[key].message)
+            req.flash('validationErrors', validationErrors)
+            req.flash('data', req.body)
+            return res.redirect('/wifi.ss/register')
+        }
+    })
+}
